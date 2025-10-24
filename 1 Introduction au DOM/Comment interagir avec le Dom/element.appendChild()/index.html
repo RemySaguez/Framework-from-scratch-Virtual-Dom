@@ -1,0 +1,11 @@
+<!--element.appendChild() Son rôle est de ajouter un nœud (élément ou texte) comme dernier enfant d’un élément parent.
+Syntaxe : parentElement.appendChild(nouvelElement);-->
+
+<ul id="liste"></ul>
+
+<script>
+    const liste = document.getElementById('liste');
+    const nouvelItem = document.createElement('li');
+    nouvelItem.textContent = 'Nouvel item';
+    liste.appendChild(nouvelItem);
+</script>

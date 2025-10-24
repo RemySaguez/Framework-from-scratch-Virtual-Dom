@@ -1,0 +1,13 @@
+<!-- Sans Virtual DOM (manipulation directe) -->
+<script>
+  const list = document.getElementById('list');
+  for (let i = 0; i < 100; i++) {
+    list.appendChild(document.createElement('li')); // 100 reflows !
+  }
+</script>
+
+<!-- Avec Virtual DOM (ex : React) -->
+<script>
+  const items = Array(100).fill(<li>Item</li>);
+  return <ul>{items}</ul>; // 1 seule mise à jour optimisée
+</script>
